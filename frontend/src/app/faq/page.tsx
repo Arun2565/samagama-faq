@@ -77,6 +77,97 @@ const SUBTOPICS_MAP: Record<string, { name: string; key: string }[]> = {
   ]
 };
 
+// ─── TLDR Templates & Detection ──────────────────────────────────────
+const TLDR_TEMPLATES: Record<string, any> = {
+  "4.7": {
+    steps: ["Reply to email from: no-reply@vicharanashala.ai", "Copy-paste the EXACT acceptance statement (see full answer below)", "Fill in your full name and today's date", "Send within 5 days of receiving offer letter"],
+    warning: "Must use exact wording — paraphrasing = withdrawal",
+    alternative: "Or download PDF → Sign → Scan → Attach to reply",
+    timeline: "Processed manually within 24-48 hours"
+  },
+  "12.2": {
+    quick_fixes: ["Verify you're logged in with REGISTERED email", "Log out → Log back in", "Switch to personal WiFi (not college network)", "Hard refresh page (Ctrl+Shift+R or Cmd+Shift+R)"],
+    escalate: "Still stuck? Type 'escalate' in Yaksha chat"
+  },
+  "2.1": {
+    quick_answer: "Anytime in 2026, BUT must finish by December 31, 2026",
+    duration: "2 months + optional 1-month grace period",
+    recommendation: "Start in May–July for full cohort experience",
+    benefits: ["Full cohort networking & peer support", "TAs available full-time (part-time after July)", "Training delivered with live discussions"],
+    warning: "Late start = Solo experience, lighter support, no buffer time"
+  },
+  "6.1": {
+    short_answer: "NO — Strictly prohibited",
+    official_channels: ["Yaksha chat on samagama.in (type 'escalate' for humans)", "Email: no-reply@vicharanashala.ai (outbound only)", "Moderated WhatsApp troubleshooting group (invite-only)"],
+    consequences: "Withdrawal, removal, blacklisting, college notification",
+    rule: "If we didn't invite you through samagama.in, it's not official"
+  },
+  "1.3": {
+    phases: ["🥉 Bronze (Phase 1): Training period at start", "🥈 Silver (Phase 2): Main project work — REQUIRED for certificate", "🥇 Gold (Phase 3): Recognition for meaningful standalone contribution", "💎 Platinum (Phase 4): Lab visit invitation + travel stipend"],
+    to_complete: "Bronze + Silver = Certificate",
+    extras: "Gold & Platinum are bonus recognitions, not required"
+  },
+  "3.7": {
+    steps: ["Download the text NOC from your dashboard (not the PDF)", "Fill in the student-side fields", "Email the file to your HOD", "HOD forwards to sudarshan@iitrpr.ac.in from their OFFICIAL email with subject: 'NOC for my student <Your Full Name>'"],
+    warning: "Forward must come from HOD's official institutional email — not personal Gmail/Outlook",
+    timeline: "Confirmation follows normal 24–48 hour timeline",
+    note: "You don't need to also upload a signed PDF if using this path"
+  },
+  "4.3": {
+    quick_answer: "Offer letter issued within ~1 hour after NOC verified + dates confirmed",
+    paths: ["Path 1 (Formal): NOC verified → dates confirmed → offer letter issued automatically (~1 hour)", "Path 2 (Tentative): Upload self-declaration → get tentative letter immediately → formal follows later"],
+    note: "Letter lives on samagama.in dashboard, not email. Notification sent to no-reply@vicharanashala.ai",
+    timeline: "Check spam folder if no notification email seen"
+  },
+  "12.17": {
+    quick_answer: "No — proctoring rules vary per course. Each check can be independently enabled by the instructor.",
+    steps: ["Check course-specific guidelines shared by your instructor", "Don't assume rules carry over between courses", "Ask your instructor or coordinator which proctoring elements are active"],
+    warning: "A relaxation in one course does NOT transfer to another. Always verify per course."
+  },
+  "3.8": {
+    steps: ["Log in to samagama.in dashboard", "Find the NOC section (dark header bar, dashboard card, or bottom of Result message)", "Click 'Download blank NOC' to get the printable PDF", "Get it signed, then click 'Upload signed NOC (PDF)' — file must be PDF under 1 MB"],
+    note: "Upload confirmation appears on the same card",
+    warning: "NOC buttons are no longer available in chat — use dashboard only"
+  },
+  "4.16": {
+    steps: ["Your NOC-signing authority emails harshdeep.r@vicharanashala.ai (CC sudarshan@iitrpr.ac.in) with subject: 'Date change request'", "Include reason + new proposed start/end dates in the body", "Dashboard unlocks → re-save new dates", "Formal offer letter re-issued with corrected period"],
+    warning: "Student cannot request directly — email must come from NOC signing authority. Old letter invalid once new one is issued.",
+    timeline: "Processing after email receipt"
+  }
+};
+
+function needsTLDR(faq: any) {
+  const actionKeywords = ['how do i','how to','what should i','when do i','can i','do i need','submit','upload','download','register','sign','confirm','accept'];
+  const isLong = faq.answer.length > 400;
+  const isActionOriented = actionKeywords.some(kw => faq.question.toLowerCase().includes(kw));
+  const hasMultipleSteps = (faq.answer.match(/\./g) || []).length > 8;
+  return isLong || (isActionOriented && hasMultipleSteps);
+}
+
+function autoGenerateTLDR(faq: any) {
+  const s = faq.answer;
+  const lines = s.split('\n').filter((l: string) => l.trim()).map((l: string) => l.trim());
+  const steps = lines.filter((l: string) => /^\d+[\.\)]/.test(l) || /^[-•]/.test(l) || /^(step|click|open|go to|select|enter|type|choose|download|upload)/i.test(l));
+  if (steps.length > 1) return { steps: steps.slice(0, 5) };
+  const sentences = s.match(/[^.!?]+[.!?]+/g) || [s];
+  const summary = sentences.slice(0, 2).join(' ').trim();
+  return summary.length > 40 ? { short_answer: summary } : null;
+}
+
+function enhanceWithTLDR(faqs: any[]) {
+  return faqs.map(faq => {
+    const needs = needsTLDR(faq);
+    const enhanced: any = { ...faq, needs_tldr: needs, answer_length: faq.answer.length };
+    if (TLDR_TEMPLATES[faq.id]) {
+      enhanced.tldr = TLDR_TEMPLATES[faq.id];
+    } else if (needs) {
+      const gen = autoGenerateTLDR(faq);
+      if (gen) enhanced.tldr = gen;
+    }
+    return enhanced;
+  });
+}
+
 export default function FAQPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   
@@ -106,7 +197,7 @@ export default function FAQPage() {
         fetchFAQs(),
         fetchCategories()
       ]);
-      setFaqs(faqData);
+      setFaqs(enhanceWithTLDR(faqData));
       setCategories(catData);
     } catch (e) {
       console.error('Failed to load FAQs:', e);
@@ -629,9 +720,17 @@ export default function FAQPage() {
                               
                               {/* Pill category tag */}
                               <div className="flex items-center justify-between">
-                                <span className={`text-[8.5px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border ${theme.bg}`}>
-                                  GUIDELINE {faq.original_id || 'FAQ'}
-                                </span>
+                                <div className="flex items-center gap-2">
+                                  <span className={`text-[8.5px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border ${theme.bg}`}>
+                                    GUIDELINE {faq.original_id || 'FAQ'}
+                                  </span>
+                                  {faq.tldr && (
+                                    <span className="text-[7px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200 flex items-center gap-1">
+                                      <span>⚡</span>
+                                      <span>TLDR</span>
+                                    </span>
+                                  )}
+                                </div>
                                 
                                 <div className="flex items-center space-x-1.5 text-[9px] font-extrabold text-slate-400 uppercase tracking-widest">
                                   <span className={`h-2 w-2 rounded-full ${theme.dot} ${isExpanded ? 'animate-ping' : ''}`} />
@@ -644,8 +743,186 @@ export default function FAQPage() {
                                 {faq.question}
                               </h4>
 
-                              {/* Answer Text with preview logic */}
+                              {/* Answer Text with TLDR preview logic */}
                               <div className="relative">
+                                {/* TLDR Section - shown when expanded and TLDR exists */}
+                                {isExpanded && faq.tldr && (
+                                  <div className="mb-5 bg-amber-50/70 border-l-4 border-amber-400 rounded-xl p-4 space-y-3">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-sm">⚡</span>
+                                      <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-700">TLDR — Quick Action</span>
+                                    </div>
+                                    
+                                    {faq.tldr.steps && (
+                                      <ul className="space-y-1.5">
+                                        {faq.tldr.steps.map((s: string, si: number) => (
+                                          <li key={si} className="flex items-start gap-2.5 text-xs text-amber-900/80 font-medium">
+                                            <span className="text-emerald-500 font-bold text-sm leading-none mt-0.5">✓</span>
+                                            <span>{s}</span>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    )}
+                                    
+                                    {faq.tldr.quick_fixes && (
+                                      <div>
+                                        <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-600 block mb-1">🔧 Quick Fixes</span>
+                                        <ul className="space-y-1">
+                                          {faq.tldr.quick_fixes.map((f: string, fi: number) => (
+                                            <li key={fi} className="flex items-start gap-2 text-xs text-amber-900/80">
+                                              <span className="text-amber-500">•</span>
+                                              <span>{f}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                    
+                                    {faq.tldr.quick_answer && (
+                                      <div className="text-sm font-bold text-amber-900">{faq.tldr.quick_answer}</div>
+                                    )}
+                                    
+                                    {faq.tldr.short_answer && (
+                                      <div className="text-xs text-amber-900/80 font-medium leading-relaxed">{faq.tldr.short_answer}</div>
+                                    )}
+                                    
+                                    {faq.tldr.paths && (
+                                      <div>
+                                        <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-600 block mb-1">Available Paths</span>
+                                        <ul className="space-y-1">
+                                          {faq.tldr.paths.map((p: string, pi: number) => (
+                                            <li key={pi} className="flex items-start gap-2 text-xs text-amber-900/80">
+                                              <span className="text-amber-500">•</span>
+                                              <span>{p}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                    
+                                    {faq.tldr.phases && (
+                                      <div>
+                                        <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-600 block mb-1">Program Phases</span>
+                                        <ul className="space-y-1">
+                                          {faq.tldr.phases.map((p: string, pi: number) => (
+                                            <li key={pi} className="flex items-start gap-2 text-xs text-amber-900/80">
+                                              <span className="text-amber-500">•</span>
+                                              <span>{p}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                    
+                                    {faq.tldr.benefits && (
+                                      <div>
+                                        <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-600 block mb-1">Benefits</span>
+                                        <ul className="space-y-1">
+                                          {faq.tldr.benefits.map((b: string, bi: number) => (
+                                            <li key={bi} className="flex items-start gap-2 text-xs text-amber-900/80">
+                                              <span className="text-emerald-500">+</span>
+                                              <span>{b}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                    
+                                    {faq.tldr.official_channels && (
+                                      <div>
+                                        <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-600 block mb-1">Official Channels</span>
+                                        <ul className="space-y-1">
+                                          {faq.tldr.official_channels.map((c: string, ci: number) => (
+                                            <li key={ci} className="flex items-start gap-2 text-xs text-amber-900/80">
+                                              <span className="text-blue-500">@</span>
+                                              <span>{c}</span>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                    
+                                    {faq.tldr.warning && (
+                                      <div className="bg-rose-50 border border-rose-200 rounded-lg p-3 flex items-start gap-2.5">
+                                        <span className="text-sm flex-shrink-0">⚠️</span>
+                                        <div>
+                                          <span className="text-[9px] font-extrabold uppercase tracking-widest text-rose-700 block mb-0.5">Critical</span>
+                                          <span className="text-xs text-rose-800/90 font-medium">{faq.tldr.warning}</span>
+                                        </div>
+                                      </div>
+                                    )}
+                                    
+                                    {faq.tldr.consequences && (
+                                      <div className="bg-rose-50 border border-rose-200 rounded-lg p-3 flex items-start gap-2.5">
+                                        <span className="text-sm flex-shrink-0">⚠️</span>
+                                        <div>
+                                          <span className="text-[9px] font-extrabold uppercase tracking-widest text-rose-700 block mb-0.5">Consequences</span>
+                                          <span className="text-xs text-rose-800/90 font-medium">{faq.tldr.consequences}</span>
+                                        </div>
+                                      </div>
+                                    )}
+                                    
+                                    {(faq.tldr.note || faq.tldr.timeline || faq.tldr.alternative || faq.tldr.recommendation || faq.tldr.rule || faq.tldr.duration || faq.tldr.escalate || faq.tldr.to_complete || faq.tldr.extras) && (
+                                      <div className="space-y-1.5 pt-1">
+                                        {faq.tldr.note && (
+                                          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 flex items-start gap-2.5">
+                                            <span className="text-sm flex-shrink-0">💡</span>
+                                            <span className="text-xs text-blue-800/90 font-medium"><span className="font-extrabold">Pro Tip:</span> {faq.tldr.note}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.timeline && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">⏱️</span>
+                                            <span className="font-medium"><span className="font-extrabold">Timeline:</span> {faq.tldr.timeline}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.alternative && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">🔄</span>
+                                            <span className="font-medium"><span className="font-extrabold">Alternative:</span> {faq.tldr.alternative}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.recommendation && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">💡</span>
+                                            <span className="font-medium"><span className="font-extrabold">Recommendation:</span> {faq.tldr.recommendation}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.rule && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">📋</span>
+                                            <span className="font-medium"><span className="font-extrabold">Remember:</span> {faq.tldr.rule}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.duration && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">⏱️</span>
+                                            <span className="font-medium"><span className="font-extrabold">Duration:</span> {faq.tldr.duration}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.escalate && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">🆘</span>
+                                            <span className="font-medium"><span className="font-extrabold">Need help?</span> {faq.tldr.escalate}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.to_complete && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">🎯</span>
+                                            <span className="font-medium"><span className="font-extrabold">To complete:</span> {faq.tldr.to_complete}</span>
+                                          </div>
+                                        )}
+                                        {faq.tldr.extras && (
+                                          <div className="flex items-start gap-2.5 text-xs text-amber-800/80">
+                                            <span className="text-sm flex-shrink-0">✨</span>
+                                            <span className="font-medium"><span className="font-extrabold">Extras:</span> {faq.tldr.extras}</span>
+                                          </div>
+                                        )}
+                                      </div>
+                                    )}
+                                  </div>
+                                )}
+                                
                                 <p className={`text-slate-600 font-medium text-xs sm:text-sm leading-relaxed whitespace-pre-line select-text ${
                                   !isExpanded ? 'line-clamp-3' : ''
                                 }`}>
