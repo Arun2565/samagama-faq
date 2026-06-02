@@ -1,5 +1,7 @@
 # AI-Powered Internship Help Platform — Full MVP Build Prompt
 
+
+- Samagama FAQ Maps Version : [Samagama FAQ](https://samagama-faec-alpha.vercel.app/)
 You are a senior staff-level AI architect, full-stack engineer, product designer, database architect, and scalable systems engineer.
 Your task is to help me build a production-grade MVP for an AI-powered internship help platform for the Vicharanashala Internship (IIT Ropar).
 The system should reduce admin workload by combining:
