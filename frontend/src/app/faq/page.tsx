@@ -220,7 +220,7 @@ function SimilarQuestions({
                     const tldr = getTLDR(faq);
                     if (!tldr) {
                       return (
-                        <p className="text-[14px] leading-relaxed font-medium text-slate-700">
+                        <p className="text-[14px] leading-relaxed font-medium text-slate-700 font-answer">
                           {faq.answer}
                         </p>
                       );
@@ -249,7 +249,7 @@ function SimilarQuestions({
                             </div>
                           )}
                         </div>
-                        <p className="text-[14px] leading-relaxed font-medium text-slate-700">
+                        <p className="text-[14px] leading-relaxed font-medium text-slate-700 font-answer">
                           {faq.answer}
                         </p>
                       </>
@@ -669,7 +669,7 @@ function FAQExperience() {
 
       <AnimatePresence>
         {selectedFaq && selectedTopic && (
-          <motion.div className="fixed inset-0 z-40 flex items-center justify-center bg-[#26332d]/25 p-4 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+          <motion.div className="fixed inset-0 z-40 flex items-center justify-center bg-[#26332d]/25 p-4 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onMouseDown={(e) => e.target === e.currentTarget && closeFaq()}>
             <motion.div
               ref={answerRef}
               tabIndex={-1}
@@ -693,7 +693,7 @@ function FAQExperience() {
                   <TLDRBlock tldr={getTLDR(selectedFaq)!} />
                 </div>
               )}
-              <p className="mt-5 whitespace-pre-line text-sm font-medium leading-7 text-slate-600 sm:text-[15px]"><RichAnswer text={selectedFaq.answer} /></p>
+              <p className="mt-5 whitespace-pre-line text-sm font-medium leading-7 text-slate-600 sm:text-[15px] font-answer"><RichAnswer text={selectedFaq.answer} /></p>
 
               <SimilarQuestions
                 selectedFaq={selectedFaq}
