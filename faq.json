@@ -111,7 +111,7 @@
     "id": "3.7",
     "section": "NOC (No Objection Certificate)",
     "question": "Can my HOD email the NOC instead of signing a printout?",
-    "answer": "Yes — there is a fully-equivalent email-forward path. Use whichever is easier; you do not need to do both. How it works: From your dashboard, download the text NOC (the \"⬇ Download text NOC (email path)\" button next to the printable PDF download). Fill in the student-side fields, then email the file to your HOD and ask them to forward it. **Your HOD forwards the email to sudarshan@iitrpr.ac.in from their official institutional email address**, with the subject line: NOC for my student &lt;Your Full Name&gt; The forward itself counts as the signature — the HOD's official institutional email address is the verification, exactly like the signatory-email field on the PDF NOC. Two non-negotiable conditions: The forward must come from the HOD's **official institutional email address** (a college / university domain) — not a personal Gmail or Outlook account. The subject line must start with NOC for my student so it routes correctly. A different subject may be missed. After the forward arrives, confirmation and offer-letter issuance follow the normal timeline (about 24 to 48 hours). Candidates who use this path do not also need to upload a signed PDF."
+    "answer": "No. Your NOC must be uploaded by you, the student, from your dashboard — we no longer accept NOCs sent by email.\nWe previously offered an email-forward path where your HOD emailed the NOC to us. That option has been retired. NOCs emailed to us — whether by you or by your HOD — will not be processed.\nThe only accepted way to submit your NOC is to download the format, get it signed by the appropriate authority at your institution, and upload the signed PDF yourself from your dashboard (see 3.8). If your college gives you a signed NOC in their own format, that is fine (see 3.5) — you still upload it yourself as a PDF."
   },
   {
     "id": "3.8",
@@ -123,7 +123,7 @@
     "id": "3.9",
     "section": "NOC (No Objection Certificate)",
     "question": "What if my NOC is not formally verified?",
-    "answer": "NOC verification takes time — typically anywhere between an hour and one full working day from the moment you upload. If you are planning to start in the coming days and need your offer letter sooner, there is a tentative route: upload a self-declaration on your profile and a tentative offer letter will be issued to you immediately. The formal offer letter follows once your NOC clears verification."
+    "answer": "NOC verification takes time — typically anywhere between an hour and one full working day from the moment you upload.\nYour offer letter is issued automatically once your signed institutional NOC is uploaded and validated — there is no faster route. (The earlier self-declaration / provisional-offer option was retired on 2026-05-27 and is no longer accepted.) Please upload your signed NOC as early as you can so your start is not delayed."
   },
   {
     "id": "3.10",
@@ -135,7 +135,7 @@
     "id": "3.11",
     "section": "NOC (No Objection Certificate)",
     "question": "My HOD/college official wants written confirmation before signing my NOC. What do I show them?",
-    "answer": "Your selection is already confirmed the moment your yellow VINS (or green VISE) result panel appears on your samagama.in dashboard — that is the official confirmation of selection. There is no separate written letter issued before the NOC step by default. If your HOD/college official insists on a document in hand before signing, use the tentative offer letter route: Log in to samagama.in and open your profile.Upload a brief self-declaration (a short statement that you intend to start your internship and will submit your signed NOC once approved). A tentative offer letter on Vicharanashala letterhead is issued to your dashboard immediately. Hand the tentative offer letter to your HOD/college official — it serves as the written confirmation they need to sign your NOC. Once your HOD/college official signs the NOC and you upload it back to samagama.in, the formal offer letter is issued automatically (see §4.3 and §3.9)."
+    "answer": "Your selection is already confirmed the moment your yellow VINS (or green VISE) result panel appears on your samagama.in dashboard — that is the official confirmation of your selection, and it is what your HOD should sign your NOC on the basis of.\nThere is no separate written confirmation letter or other proof-of-selection document issued before the NOC step — and none can be sent on request. (The selection-confirmation letter and the self-declaration / provisional-offer route have both been discontinued.) Your offer letter is issued only after your signed NOC is uploaded and validated, so it is not available beforehand.\nIf your college will not sign without something in hand, show them your VINS result panel on the dashboard as evidence of selection — that is the confirmation we provide."
   },
   {
     "id": "3.12",
@@ -238,6 +238,24 @@
     "section": "Selection, offer letter, and certificate",
     "question": "Can I change my internship dates after the offer letter has been issued?",
     "answer": "Yes — you can change your start and end dates even after the formal offer letter has gone out. The dashboard self-edit path (see §4.11) is no longer available at this stage, but a change is still possible through the route below. Once the offer letter is generated, the Confirm Internship Dates card is locked on your dashboard. This is intentional: the dates were formally committed against the institutional approval recorded on your NOC, so revising them needs the same institutional authority to re-approve. How to request the change: The official from your institution who signed your NOC must send an email: To: harshdeep.r@vicharanashala.aiCC: sudarshan@iitrpr.ac.inSubject: Date change request — Your Full Name — Vicharanashala Summership 2026Body: the reason for the date change, plus the new proposed start and end dates. Once we receive that email, we will unlock the Confirm Internship Dates card on your dashboard so you can re-save the new dates, and we will re-issue the formal offer letter with the corrected period. The earlier letter (with the old dates) ceases to be valid the moment the new one is issued. Important: requests sent directly by the student cannot be processed at this stage. The email must come from your NOC signing authority. This is a deliberate guardrail, not a refusal — your internship period was committed jointly with your institution, and revising it needs the same joint approval. If you also need a re-issued NOC from your college reflecting the new dates, upload the updated NOC via the dashboard once the new dates are saved."
+  },
+  {
+    "id": "4.17",
+    "section": "Selection, offer letter, and certificate",
+    "question": "How do I get the link for the daily Zoom standups? Are they mandatory?",
+    "answer": "Daily Zoom standup links are posted in the Announcements section on your samagama.in dashboard — look for the announcement bell at the top of the page. You are expected to check it daily before the session. You do not send separate emails for daily standups. The announcement on your dashboard is the only delivery channel for the daily link.\nAttending the daily standups is mandatory for all interns. This is a full-time summer internship programme, and the daily standup is the primary touchpoint where progress, blockers, and the day's plan are communicated. Missing standups is treated as missing work. Attendance and participation are tracked against strict thresholds — see §10.7.\nAbout the kickoff orientation. The kickoff orientation was held for the recommended 15 May cohort (see §4.12). Session recordings are not shared with interns who join late — see §2.6.\nIf you joined late, you are expected to complete the orientation through a special proctored catch-up path on ViBe. The catch-up is entirely proctored and includes quizzes that check whether you have understood the content of the orientation session. Completing this catch-up is mandatory for late starters before participating in the regular standups."
+  },
+  {
+    "id": "4.18",
+    "section": "Selection, offer letter, and certificate",
+    "question": "How do I provide my Zoom ID, and why does it matter?",
+    "answer": "On your dashboard, just before 'Start the internship,' you'll see a step called 'Provide your Zoom ID.' Enter the exact email address linked to your Zoom account — the one you use (or will use) to join the daily live sessions — and save it.\nThis matters because we match your live-session attendance and participation using this email. If the Zoom ID you provide doesn't match the email you actually join Zoom with, your attendance won't be credited to you. So enter it carefully and be sure it is genuinely your Zoom account's email."
+  },
+  {
+    "id": "4.19",
+    "section": "Selection, offer letter, and certificate",
+    "question": "I saved the wrong Zoom ID — can I change it?",
+    "answer": "Once saved, your Zoom ID is final and cannot be changed by you — please double-check before you submit. If you are certain you entered the wrong email, log in and tell us in the chat (type #escalate) with your correct Zoom email, and our team will review and correct it for you."
   },
   {
     "id": "5.1",
@@ -432,325 +450,403 @@
     "answer": "We share each day's schedule through any one of these channels: Samagama dashboard, Yaksha chat, or email. Please keep an eye on all three — on a given day the schedule may go out via any one of them."
   },
   {
+    "id": "10.6",
+    "section": "Phase 1 — coursework, Vibe LMS, and live sessions",
+    "question": "Can we register and start the vibe courses before our internship date formally starts?",
+    "answer": "You will receive the viBE course link only after your internship starts. You can register and start the viBE courses related to the internship only after your internship formally starts."
+  },
+  {
+    "id": "10.7",
+    "section": "Phase 1 — coursework, Vibe LMS, and live sessions",
+    "question": "What are the attendance and participation rules?",
+    "answer": "Attendance and participation are tracked strictly, and all of the following are measured continuously over a rolling window of the last 5 working days:\nLive-session attendance — at least 85%. You must be present for at least 85% of the total Zoom meeting time.\nLive participation — at least 85%. You must respond to the in-session polls and quizzes at least 85% of the times they are run.\nQuizzes — attempted, and passed. Every quiz must be attempted, and your pass percentage must be at least 50%.\nBecause this is a rolling 5-working-day measure, it reflects your recent engagement, not a one-time average. If any one of these three falls below its threshold, you will be excused from the current batch and moved to the next batch. This is not a penalty — it simply means you rejoin in a later batch where you can give the programme the full attention it needs."
+  },
+  {
+    "id": "10.8",
+    "section": "Phase 1 — coursework, Vibe LMS, and live sessions",
+    "question": "What are Spurti Points (SP)? Do they affect my internship?",
+    "answer": "Spurti Points are a platform feature that tracks your engagement with the programme. They are currently in an early beta phase — not used for any decisions about your standing. See Section 11 for the full SP FAQ."
+  },
+  {
     "id": "11.1",
+    "section": "Spurti Points",
+    "question": "What are Spurti Points?",
+    "answer": "Spurti Points, or SP, are a points layer on the platform that reflects your overall engagement with the programme.\nThink of SP as an indicator of your engagement — nothing more. It is not a score that defines you as a student or determines your future in the programme."
+  },
+  {
+    "id": "11.2",
+    "section": "Spurti Points",
+    "question": "Is SP a finished system?",
+    "answer": "No. Spurti Points are still being actively built and refined.\nSP is best understood as a work in progress rather than a finalised grading or evaluation system. The rules and calculations may evolve as the programme develops."
+  },
+  {
+    "id": "11.3",
+    "section": "Spurti Points",
+    "question": "How much importance should I give to my SP number?",
+    "answer": "Please do not read too much into the number.\nSP is an early beta feature. It is meant to give you a broad sense of your engagement, not to measure your performance or determine outcomes."
+  },
+  {
+    "id": "11.4",
+    "section": "Spurti Points",
+    "question": "Can I be terminated or excused because of low SP?",
+    "answer": "No.\nThe programme team will not terminate, excuse, or take any decision about any intern on the basis of Spurti Points alone. SP is not used as a basis for such decisions."
+  },
+  {
+    "id": "11.5",
+    "section": "Spurti Points",
+    "question": "What if my SP shows as zero or even negative?",
+    "answer": "There is genuinely no cause for concern.\nA zero or negative SP balance does not mean you are in trouble with the programme. Because SP is in an early beta phase, the number may not always reflect your actual effort or attendance accurately."
+  },
+  {
+    "id": "11.6",
+    "section": "Spurti Points",
+    "question": "Does a higher SP bring any benefits?",
+    "answer": "Yes, in a positive way.\nInterns who build up higher Spurti Points may, from time to time, become eligible for small perks or recognition from the programme team.\nThink of a higher SP as a pleasant upside to aim for, never as a penalty to fear."
+  },
+  {
+    "id": "11.7",
+    "section": "Spurti Points",
+    "question": "If SP does not determine outcomes, what does?",
+    "answer": "Your attendance and live participation are what the programme watches closely and tracks strictly.\nA low SP number is not a cue to ease off. The programme has clear participation requirements that are monitored independently of SP (see §10.7 for the exact thresholds)."
+  },
+  {
+    "id": "11.8",
+    "section": "Spurti Points",
+    "question": "What are the participation requirements tracked strictly?",
+    "answer": "Looking at your most recent five working days on a rolling basis, every intern is expected to meet all three of the following:\nStay present for at least 85% of the total live Zoom session time.\nRespond to at least 85% of the polls and quizzes run during the sessions.\nAttempt every quiz and clear each with a score of at least 50%.\nAll three requirements apply simultaneously. Falling short on even one of them counts."
+  },
+  {
+    "id": "11.9",
+    "section": "Spurti Points",
+    "question": "What does \"rolling basis\" mean?",
+    "answer": "The programme does not look at a single average across the entire duration.\nInstead, it looks at your most recent five working days at any given point in time. As each new working day passes, the oldest day drops out and the newest day is added.\nThis means your recent, consistent engagement is what counts — not a strong performance in one week followed by long absences. The window keeps moving forward."
+  },
+  {
+    "id": "11.10",
+    "section": "Spurti Points",
+    "question": "What happens if I fall below the required participation level?",
+    "answer": "If any one of the three participation requirements slips below the mark across your most recent five working days, you will be moved from the current batch into a later batch.\nThis is not a termination or an excusal from the programme. It is a practical step so you can rejoin when you are able to give the programme your full attention."
+  },
+  {
+    "id": "12.1",
     "section": "Yaksha Chat Related",
     "question": "I'm unable to type in the chat after clicking 'Interact with Yaksha' — what should I do?",
     "answer": "After logging into your Yaksha portal, if the field shows that you can't type, scroll up to the top of your window and click on the 'Chat with Yaksha' button to activate Yaksha. This way you will be able to interact with Yaksha properly."
   },
   {
-    "id": "12.1",
+    "id": "13.1",
     "section": "ViBe Platform",
     "question": "How do I log in to ViBe?",
     "answer": "Link for the website: https://vibe.vicharanashala.ai/authSign up as a student with the registered mail ID into the ViBe platform.To log in to the ViBe platform, follow the steps below carefully: ``` Log in to the ViBe platform as a student from registered email IDCheck the \"Notifications\" tab in the Top right side of the Dashboard.Accept the course invite sent for your respective MERN Course. ``` ⚠️ Logging in with a different email ID may result in access issues or missing course visibility."
   },
   {
-    "id": "12.2",
+    "id": "13.2",
     "section": "ViBe Platform",
     "question": "Invite accepted but shows \"No course enrolled\"?",
     "answer": "If you see \"No course enrolled\": Make sure you are logged in with the correct registered email ID.Check if your college email has multiple aliases and try the correct one.Log out and log in again once.Use personal wifi instead of college wifi as there might be some network restrictions of access.If the issue continues, please follow these steps: Step 1: Allow Third-Party Cookies Enable Cookies in Chrome: Open chrome://settings/cookies. Turn OFF \"Block third-party cookies\" and turn ON \"Allow all cookies.\"Add Site Exception: Scroll to \"Sites that can always use cookies\" and click \"Add.\" Paste .vicharanashala.ai and ensure \"Including third-party cookies\"* is enabled.Restart browser. Step 2: Fix DNS (Most Important) Change your laptop DNS to Google DNS.Go to: Control Panel → Network → Active Network → Properties → IPv4.Shortcut: Win + R → ncpa.cpl → right-click properties.Set Preferred DNS to 8.8.8.8 and Alternate DNS to 8.8.4.4.Save. Step 3: Flush Old DNS Cache (it's safe) Open Command Prompt as Admin.Run the following commands:ipconfig /flushdnsipconfig /releaseipconfig /renewRestart WiFi."
   },
   {
-    "id": "12.3",
+    "id": "13.3",
     "section": "ViBe Platform",
     "question": "Why are videos stuck or repeating?",
     "answer": "This may happen due to ViBe's monitored learning system. Common reasons include: Videos must be watched fully and in sequence (no skipping).Camera and microphone permissions must be enabled.Poor lighting or high background noise can affect playback.Switching tabs or staying idle may restart the video. ✅ For smooth playback, stay on the ViBe tab, keep your camera on, and watch videos in a quiet, well-lit environment."
   },
   {
-    "id": "12.4",
+    "id": "13.4",
     "section": "ViBe Platform",
     "question": "Can I use a mobile or tablet?",
     "answer": "No, only desktop/laptop is supported."
   },
   {
-    "id": "12.5",
+    "id": "13.5",
     "section": "ViBe Platform",
     "question": "I'm experiencing video issues (stuck, looping, skipping) on ViBe. How do I troubleshoot?",
     "answer": "Try these troubleshooting steps in order: Refresh the page and check multiple timesInspect browser console: Right-click → Inspect → Go to Network or Console tab → Try watching the video and check for any visible errorsLog out and log in againUse a different browserClear browsing data and cache, then try to re-login If the issue persists after trying all steps, record the issue and contact Yaksha for any queries by mentioning #escalate-ViBe."
   },
   {
-    "id": "12.6",
+    "id": "13.6",
     "section": "ViBe Platform",
     "question": "I have completed all videos and quizzes in the ViBe course, but my progress is still showing less than 100%. What should I do?",
     "answer": "Please do not worry. This might be a skip made in the quiz/video item due to penalty score as the quiz/video item might not have been successfully completed/marked. Please verify that you've completed all the course items (1006/1006). If not, please retry the missed contents again. In the meantime, you may try the following steps once: Refresh your browserLog out, clear your browser cache, and log in again"
   },
   {
-    "id": "12.7",
+    "id": "13.7",
     "section": "ViBe Platform",
     "question": "I feel the ViBe content or platform is not good or I am unhappy with the way progress is evaluated. Can I request an exception or bypass the system?",
     "answer": "ViBe is built and continuously improved by interns and students themselves. It is a free and open-source learning platform, and our goal is to keep it that way by encouraging the community to actively contribute, improve, and strengthen it rather than bypass it. If a learner strongly feels that the regular ViBe flow does not fairly reflect their understanding, there is a formal alternative evaluation path. However, this path is intentionally rigorous to ensure fairness for everyone. In such cases, you will be asked to: Watch the specified YouTube video content completely (links will be provided).Appear for a three-hour proctored examination based only on that content.Write the exam under strict supervision with:Two cameras (front and side view), andOne online human proctor monitoring you live. This examination becomes the sole basis for evaluation in place of the regular internship track. The scoring rules are strict: Score below 60%: You are considered not qualified and must join the next cohort and continue only through the normal ViBe mode.Score between 60% and 80%: You get one more chance in the next scheduled exam.Score above 80%: You are considered to have passed. This special exam is conducted once every fortnight, so choosing this route may significantly delay your progress compared to continuing normally on ViBe. Because this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option."
   },
   {
-    "id": "12.8",
+    "id": "13.8",
     "section": "ViBe Platform",
     "question": "Is the ViBe consent form compulsory? What if I don't want to grant camera access?",
     "answer": "Yes — the consent form is compulsory. We would like to clearly inform you that providing consent is a mandatory requirement for any candidate enrolling in and continuing a course on the ViBe Learning Platform. The platform is designed with proctoring enabled throughout the learning process, which requires access to your webcam and microphone. This is essential to ensure: Fairness across all participantsAcademic integrityActive and genuine participation If you choose not to grant camera and microphone access, you will not be able to proceed with the course, as proctoring is an integral part of the learning and evaluation workflow. Privacy & Monitoring Clarification As outlined in the consent form: ViBe does not continuously record videos.Proctoring operates via real-time monitoring mechanisms during learning and assessments.All data is handled strictly in accordance with the stated consent terms and applicable data-protection guidelines. In short, consent is not optional — it is a core requirement for participation on the platform."
   },
   {
-    "id": "12.9",
+    "id": "13.9",
     "section": "ViBe Platform",
     "question": "What are penalty scores on the ViBe platform, and how do they affect our performance or HP?",
     "answer": "Penalty scores are generated when anomalies are detected during your activity on the ViBe platform (for example, irregular behavior while watching video lessons or attempting quizzes). If the penalty score becomes high, you may be required to: Rewatch the video lesson, andRetake the associated quiz. At present, these penalty scores do not impact your HP (Health Points) or overall performance evaluation, as they are not being considered for scoring. Their primary purpose is to ensure proper engagement with the learning content."
   },
   {
-    "id": "12.10",
+    "id": "13.10",
     "section": "ViBe Platform",
     "question": "When should I use the Flag option on ViBe, and when should I contact support?",
     "answer": "Use the Flag feature on ViBe only for course content-related issues, such as problems with video content or quiz questions. For technical issues, platform errors, login problems, or logistics-related queries, do not use the flag option. Instead, contact Yaksha so the team can assist you faster. Using the correct method helps resolve issues quickly and keeps the learning process smooth for everyone."
   },
   {
-    "id": "12.11",
+    "id": "13.11",
     "section": "ViBe Platform",
     "question": "What is Linear Progression on ViBe?",
     "answer": "Linear progression is enabled for every course on ViBe. This means each learner must watch the videos and attempt the quizzes in the exact order they appear on the left panel of the course page. In practice: You cannot click on a video or quiz that lies far ahead of your current position.You must complete each item before the next one unlocks.Skipping videos or quizzes is not allowed by design. Progress is sequential — finish the item in front of you, and the next one opens up automatically."
   },
   {
-    "id": "12.12",
+    "id": "13.12",
     "section": "ViBe Platform",
     "question": "Can I use the left navigation panel to jump ahead to a later video or quiz?",
     "answer": "No. Although the left navigation panel displays the full list of items in your course, it is meant only as a progress map — not as a jump-to-anywhere menu. Instead of clicking through the left panel: Click Next Quiz or Next Lesson as it appears on the right panel.Let the platform unlock items for you in sequence as you complete each one. Trying to skip ahead through the left panel will simply trigger the Access Restricted alert (see 12.13)."
   },
   {
-    "id": "12.13",
+    "id": "13.13",
     "section": "ViBe Platform",
     "question": "I am seeing a red \"Access Restricted\" banner. Is this a bug?",
     "answer": "No, this is not a bug. The red Access Restricted banner is an intentional alert from the platform. The banner looks like this: a red toast notification with an exclamation icon, the title \"Access Restricted\", and the message \"Returning to previous valid content.\" below it. It appears when you try to open an item (video or quiz) before completing all the items that come before it. If you are on the nth item but haven't completed every video and quiz from item 1 through item n−1, the platform will show this alert. When the banner appears, ViBe automatically returns you to the previous valid content — that is, the last item you had legitimately reached in the sequence. You will not lose any progress; you'll simply be sent back to where you actually are in the course. It is the system gently telling you: \"Please check — there is something earlier in the course that you haven't finished yet."
   },
   {
-    "id": "12.14",
+    "id": "13.14",
     "section": "ViBe Platform",
     "question": "How do I resolve the \"Access Restricted\" error?",
     "answer": "Follow these steps in order: Go back to the left panel and scroll through your course items from the beginning.Look for any item without a completion tick — that is your missed video or quiz.Complete that item (watch the full video, or attempt and submit the quiz).Refresh the page once you've completed all earlier items.If the Access Restricted banner still appears after refreshing and you are sure all earlier items are completed, report the issue to Yaksha by mentioning #escalate-ViBe. In the large majority of cases, simply finding and completing the missed item clears the alert."
   },
   {
-    "id": "12.15",
+    "id": "13.15",
     "section": "ViBe Platform",
     "question": "Why does ViBe sometimes make me re-watch a clip after a quiz?",
     "answer": "If your answer to the check-in quiz didn't go through correctly, ViBe will take you back to the same clip and let you try again. This is called a re-watch, and it is part of the design — not a penalty. A few things to keep in mind: Re-watches are not recorded against you. They do not affect your HP or evaluation.The clips are short, so a re-watch usually costs less time than guessing through multiple retries.Think of the re-watch as the platform helping the idea actually stick before you move on, rather than scolding you for getting it wrong."
   },
   {
-    "id": "12.16",
+    "id": "13.16",
     "section": "ViBe Platform",
     "question": "What kinds of quiz questions will I see on ViBe?",
     "answer": "ViBe quizzes come in four formats: FormatWhat it looks likeWhat to doPick one (MCQ)One right answer out of four or so optionsRead all the options before clicking Pick one or more (MSQ)\"Select all that apply\" — could be one correct option or severalRead each option carefully; small mistakes happen here most Type a number (NAT)A text box asking for a numeric valueType just the number — no units or extra symbols, unless the question explicitly asks True or FalseA statement with only two options — True or FalseRead the statement carefully; a single word like \"always,\" \"never,\" or \"only\" can flip the correct answer A small tip: watch the clip first, then answer. Trying to read the question while the clip is still playing splits your attention."
   },
   {
-    "id": "12.17",
+    "id": "13.17",
     "section": "ViBe Platform",
     "question": "Are the same proctoring rules applied to every course on ViBe?",
     "answer": "No — and this is one of the most important things to understand before reading the rest of this section. ViBe's proctoring system is modular. Each individual check — face visibility, single-face-in-frame, lighting, background voices, gaze on screen, camera/microphone access — can be independently switched on or off by the instructor for a given course or cohort. This means: The instructor decides which proctoring elements are active for their course.Some courses may run with all checks active (typical for internships, faculty FDPs, and credentialed programmes).Other courses may run with only a subset active — for example, face visibility on but background-voice detection off — depending on the learning context.Certain pilot or open courses may have most proctoring relaxed, especially where the focus is exploration rather than verified evaluation. The FAQs that follow (12.18 through 12.23) describe the full set of proctoring behaviours the platform is capable of. They are written as if everything is switched on. **Whether a specific check applies to your course depends entirely on what your instructor has enabled for that course.** ⚠️ Please do not assume rules carry across courses. A relaxation given in one course (for example, allowing two faces in frame for a paired-learning module) does not transfer to another course on the same platform. Always check the course-specific guidelines shared by your instructor or programme team before each course you join. When in doubt, ask your instructor or programme coordinator which proctoring elements are active for your current course."
   },
   {
-    "id": "12.18",
+    "id": "13.18",
     "section": "ViBe Platform",
     "question": "What does the \"quiet helper\" on ViBe actually do?",
     "answer": "While a lesson plays, a small helper runs gently on your device using your camera and microphone. It checks, in real time, that the basic conditions for learning are present. Specifically, it looks at five things: A face is visible — to confirm you are really there.Only one face is in frame — to confirm the learning is yours.There is enough light on your face — a silhouette is hard to recognise.The room isn't full of voices — no talking, TV, or background podcasts.You are looking at the screen — brief glances away are fine; long stretches feel like drifting off. The helper is not a judge. Brief, normal movements (a stretch, a sneeze, a glance at your notebook) are absolutely fine. It only pays attention to sustained patterns, not split-second things."
   },
   {
-    "id": "12.19",
+    "id": "13.19",
     "section": "ViBe Platform",
     "question": "Does ViBe record long videos of me while I'm learning?",
     "answer": "No. ViBe does not continuously record videos of you. The camera and microphone are used for real-time presence checks only.Long recordings of your face or voice are not stored.When the lesson ends, the helper goes quiet too.All data is handled strictly in accordance with the consent terms shown when you signed up. Think of the helper as a quiet study partner sitting beside you — there if needed, invisible otherwise."
   },
   {
-    "id": "12.20",
+    "id": "13.20",
     "section": "ViBe Platform",
     "question": "What is the single most common avoidable mistake learners make?",
     "answer": "Sitting with a window directly behind you during the day. The room may feel bright to you, but your camera only sees a dark silhouette where your face should be. The helper then struggles to confirm your presence, and your lesson may pause or rewind. The fix is simple: move so the window is to your side or in front of the laptop, not behind you. A lamp placed in front of you works just as well in the evening."
   },
   {
-    "id": "12.21",
+    "id": "13.21",
     "section": "ViBe Platform",
     "question": "Why does the lesson keep pausing or restarting even when I'm paying attention?",
     "answer": "If a clip keeps stopping or going back to the start, the cause is almost always something small in your environment, not the platform itself. Run through this checklist: Your face is too dark → add a lamp in front of you.Your face is partly out of frame → raise the laptop or sit a bit closer to the camera.There are voices in the background → close the door, or move to a quieter room.You switched tabs or went idle → stay on the ViBe tab; take breaks between clips, not during them.Camera or mic permission dropped → check the lock icon in your browser's address bar and confirm both are set to \"Allow\"."
   },
   {
-    "id": "12.22",
+    "id": "13.22",
     "section": "ViBe Platform",
     "question": "Can I read the quiz questions aloud or mutter to myself while watching?",
     "answer": "It's best not to. The microphone listens for sustained voices in the room, and reading aloud, muttering, or asking a roommate \"wait, what was that?\" can all be picked up as anomalies. The simple habit is: watch in silence, answer in silence, and chat freely during your breaks between clips."
   },
   {
-    "id": "12.23",
+    "id": "13.23",
     "section": "ViBe Platform",
     "question": "Can I study with a friend on camera since we're learning together?",
     "answer": "In most courses, no. Only you — the registered Learner — should be in the camera frame during a lesson. The helper checks that exactly one face is visible at a time. Group study is genuinely a wonderful habit, just not inside a ViBe session itself. A good way to do it: Hop on a separate call with your friend on your phone or a second device.Discuss concepts before or after a ViBe lesson, not during it.Return to ViBe alone when you're ready to watch the clip and attempt the quiz. > 📌 Note: As explained in 12.17, the single-face-in-frame check is an instructor-controlled setting. A few courses (typically paired-learning or collaborative pilots) may explicitly relax this rule. Do not assume that relaxation in one course applies to another — even on the same platform with the same login. Always default to studying alone unless your instructor has clearly stated otherwise for that specific course."
   },
   {
-    "id": "12.24",
+    "id": "13.24",
     "section": "ViBe Platform",
     "question": "Will I lose my progress if I clear my browser or reinstall it?",
     "answer": "No. Your progress is saved on the server, tied to your registered email — not on your browser or your computer. So: Refreshing the page, clearing cache, switching browsers, or even reinstalling your browser will not wipe your progress.The moment you log back in with the same registered email, all your completed clips and quizzes will be exactly where you left them. When in doubt: log out, log back in."
   },
   {
-    "id": "12.25",
+    "id": "13.25",
     "section": "ViBe Platform",
     "question": "Is there a recommended daily learning rhythm on ViBe?",
     "answer": "Yes — small, regular sessions work far better than long marathon sessions. A practical rhythm: Show up daily, even if only for thirty minutes. Daily consistency beats a five-hour weekend cram.Take breaks between clips, not during them. A clip is short — finish it first.Treat each quiz as a gentle check-in, not a high-stakes test.For programmes with deadlines (such as internships or faculty cohorts), aim for the daily progress target announced by your programme team — typically around 3.33% per day. > 📌 A note on milestones: The pacing above is a general guideline only. For any specific programme (Vinternship cohort, faculty FDP, NPTEL internship, institutional pilot, etc.), the actual milestones, deadlines, and weekly progress targets will be announced by your instructors or programme team. Always follow the milestone schedule communicated for your specific cohort — that takes precedence over the general guidance here."
   },
   {
-    "id": "12.26",
+    "id": "13.26",
     "section": "ViBe Platform",
     "question": "What should my \"study corner\" look like before I start a ViBe session?",
     "answer": "A ViBe-friendly study spot needs only three things: Light in front of your face — a lamp or window facing you, never behind.Just you in the camera frame — ask family, friends, or pets not to wander through.A reasonably quiet room — no TV, no music with words, no one else on a call nearby. Two minutes of setup before you start saves a lot of small frustrations during the lesson."
   },
   {
-    "id": "13.1",
+    "id": "14.1",
     "section": "Team Formation",
     "question": "Is team formation compulsory?",
     "answer": "Yes. All projects in Phase 2 and Phase 3 (some parts) must be completed in teams. Every participant is required to be part of a team."
   },
   {
-    "id": "13.2",
+    "id": "14.2",
     "section": "Team Formation",
     "question": "What is the size of a team?",
     "answer": "The team size is fixed at four members. This is mandatory — you cannot have fewer or more members in a team at the time of final formation."
   },
   {
-    "id": "13.3",
+    "id": "14.3",
     "section": "Team Formation",
     "question": "How are teams formed?",
     "answer": "For students who joined on May 15 and 16: Teams were formed through a structured activity.For students joining later: Teams will be randomly assigned by the administration."
   },
   {
-    "id": "13.4",
+    "id": "14.4",
     "section": "Team Formation",
     "question": "I started on May 15/16 but couldn't form a team during the activity. What happens now?",
     "answer": "You will be randomly assigned to a team."
   },
   {
-    "id": "13.5",
+    "id": "14.5",
     "section": "Team Formation",
     "question": "There was a typo in our email addresses during team formation. Can we fix it?",
     "answer": "No action is required from your side. The administration will verify and match email IDs with names before finalizing and locking teams."
   },
   {
-    "id": "13.6",
+    "id": "14.6",
     "section": "Team Formation",
     "question": "I formed a team with only two members. Will it be considered?",
     "answer": "No. Teams with fewer than four members will be expanded by adding additional members to make a final team of four."
   },
   {
-    "id": "13.7",
+    "id": "14.7",
     "section": "Team Formation",
     "question": "What if a team member leaves or becomes ineligible during Phase 1?",
     "answer": "The administration will attempt to assign a replacement member.If no replacement is found, you may continue as a team of three.You must inform the admin immediately, or the change will not be recognized."
   },
   {
-    "id": "13.8",
+    "id": "14.8",
     "section": "Team Formation",
     "question": "Can I form a team with someone from my own college?",
     "answer": "No. Teams must consist of members from different institutions to encourage networking. Exception: Students from the same institution but different campuses/locations may be allowed."
   },
   {
-    "id": "13.9",
+    "id": "14.9",
     "section": "Team Formation",
     "question": "Can I form a team with students from my IIT MBS cohort?",
     "answer": "No. You are encouraged to collaborate with participants outside your existing cohort."
   },
   {
-    "id": "13.10",
+    "id": "14.10",
     "section": "Team Formation",
     "question": "Can we change our team name after submission?",
     "answer": "Yes, team names are tentative and can be changed. However, due to operational constraints, frequent changes are discouraged."
   },
   {
-    "id": "13.11",
+    "id": "14.11",
     "section": "Team Formation",
     "question": "What if multiple teams choose the same name?",
     "answer": "Teams will be distinguished using suffixes (e.g., Team X-1, Team X-2, etc.)."
   },
   {
-    "id": "13.12",
+    "id": "14.12",
     "section": "Team Formation",
     "question": "What should I do if I face issues within my team?",
     "answer": "Report any concerns immediately to your assigned scholar/mentor. Maintaining a safe and respectful environment is a priority."
   },
   {
-    "id": "13.13",
+    "id": "14.13",
     "section": "Team Formation",
     "question": "How will I know who my mentor is?",
     "answer": "Your mentor will be the scholar assigned to the project your team is working on."
   },
   {
-    "id": "13.14",
+    "id": "14.14",
     "section": "Team Formation",
     "question": "When will I know my team details?",
     "answer": "Teams are announced in phases via email. Please regularly check your inbox for updates."
   },
   {
-    "id": "13.15",
+    "id": "14.15",
     "section": "Team Formation",
     "question": "I received a team list email but my name is not included. What should I do?",
     "answer": "Team announcements are phased, so your name may appear in a later list.If your entire cohort has moved to team activities and you are still unassigned, raise the issue on Yaksha or contact a scholar."
   },
   {
-    "id": "13.16",
+    "id": "14.16",
     "section": "Team Formation",
     "question": "We selected Project X as our top priority but were assigned Project Y. Can we change it?",
     "answer": "No. Project assignments are final and cannot be changed. Allocation is done to ensure balanced distribution across projects."
   },
   {
-    "id": "13.17",
+    "id": "14.17",
     "section": "Team Formation",
     "question": "I just started the internship. Can I form my own team now?",
     "answer": "No. For later cohorts, teams will be randomly assigned. Please wait for the official communication."
   },
   {
-    "id": "13.18",
+    "id": "14.18",
     "section": "Team Formation",
     "question": "When do team activities begin?",
     "answer": "Team-based work begins in Phase 2. During Phase 1 (online coursework), you do not need to worry about team activities."
   },
   {
-    "id": "13.19",
+    "id": "14.19",
     "section": "Team Formation",
     "question": "Can I request a specific teammate after teams are assigned?",
     "answer": "No. Team assignments are final and requests for changes are not entertained."
   },
   {
-    "id": "13.20",
+    "id": "14.20",
     "section": "Team Formation",
     "question": "What happens if a team member is inactive or not contributing?",
     "answer": "You should report the issue to your mentor/scholar early. Prolonged inactivity may lead to administrative intervention."
   },
   {
-    "id": "13.21",
+    "id": "14.21",
     "section": "Team Formation",
     "question": "Can I switch teams if there are conflicts?",
     "answer": "Team switches are not allowed except in exceptional, admin-approved cases involving serious concerns."
   },
   {
-    "id": "13.22",
+    "id": "14.22",
     "section": "Team Formation",
     "question": "Will team performance affect individual evaluation?",
     "answer": "Yes. While some components may be individual, team deliverables are a key part of evaluation."
   },
   {
-    "id": "13.23",
+    "id": "14.23",
     "section": "Team Formation",
     "question": "How will communication happen within teams?",
     "answer": "Teams are expected to self-organize internal team coordination (e.g., a small WhatsApp/email thread limited to the four teammates). Official programme updates will continue to come via email and Yaksha chat on samagama.in. Note: this in-team coordination is distinct from the unofficial cohort-wide channels prohibited under §6.1 — a four-person team thread for project work is fine; any group that purports to act on behalf of Vicharanashala or the wider cohort is not."
   },
   {
-    "id": "13.24",
+    "id": "14.24",
     "section": "Team Formation",
     "question": "What if I miss the team allocation email?",
     "answer": "All communication is sent via registered email. You are responsible for checking regularly, including spam folders."
   },
   {
-    "id": "13.25",
+    "id": "14.25",
     "section": "Team Formation",
     "question": "Can a team be dissolved and reformed?",
     "answer": "No. Once finalized, teams are locked and cannot be dissolved."
   },
   {
-    "id": "13.26",
+    "id": "14.26",
     "section": "Team Formation",
     "question": "What happens if I drop out of the internship?",
     "answer": "Your team will be adjusted accordingly, and the remaining members may continue as a team of three or receive a replacement."
   },
   {
-    "id": "13.27",
+    "id": "14.27",
     "section": "Team Formation",
     "question": "Will we get time to get to know our teammates before Phase 2?",
     "answer": "Yes. There is typically a buffer period before Phase 2 where teams can connect and prepare. Vicharanashala Lab · Indian Institute of Technology Ropar · 2026 cycle Questions: log in at samagama.in and ask Yaksha."
