@@ -160,6 +160,16 @@ const topicDefinitions: CampusTopicDefinition[] = [
     softColor: "#fff0ef",
     icon: "users",
   },
+  {
+    slug: "spurti",
+    label: "Spurti Points",
+    section: "Spurti Points",
+    location: { name: "Spurti Hub", x: 72, y: 55 },
+    description: "Understand your Spurti Points score, participation tracking, and the rolling 5-day window.",
+    color: "#c9a227",
+    softColor: "#fefaec",
+    icon: "trophy",
+  },
 ];
 
 export const campusTopics: CampusTopic[] = topicDefinitions.map((topic) => ({

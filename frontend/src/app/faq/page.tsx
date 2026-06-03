@@ -28,6 +28,7 @@ import {
   Search,
   ShieldCheck,
   Sparkles,
+  Trophy,
   Users,
   X,
 } from "lucide-react";
@@ -56,6 +57,7 @@ const iconMap = {
   monitor: Monitor,
   shield: ShieldCheck,
   sparkles: Sparkles,
+  trophy: Trophy,
   users: Users,
 };
 
@@ -413,7 +415,7 @@ function SearchDialog({
               </button>
             </div>
             <div className="max-h-[430px] overflow-y-auto p-3">
-              {!query.trim() && <p className="px-3 py-8 text-center text-sm text-slate-500">Search across all 126 verified questions and 13 campus locations.</p>}
+              {!query.trim() && <p className="px-3 py-8 text-center text-sm text-slate-500">Search across all 142 verified questions and 14 campus locations.</p>}
               {query.trim() && !results.length && <p className="px-3 py-8 text-center text-sm text-slate-500">No matching FAQ found. Try a shorter keyword.</p>}
               {results.map(({ faq, topic }) => topic && (
                 <button
@@ -568,7 +570,7 @@ function FAQExperience() {
             </span>
             <h1 className="mt-4 text-4xl font-black tracking-tight text-[#263b34] sm:text-6xl">Explore your internship campus.</h1>
             <p className="mt-3 max-w-2xl text-sm font-medium leading-6 text-slate-500 sm:text-base">
-              Every stop opens a verified collection of answers. Pick a place on the IIT Ropar knowledge map or search across all 126 questions.
+              Every stop opens a verified collection of answers. Pick a place on the IIT Ropar knowledge map or search across all 142 questions.
             </p>
           </div>
           <button
@@ -693,7 +695,7 @@ function FAQExperience() {
                   <TLDRBlock tldr={getTLDR(selectedFaq)!} />
                 </div>
               )}
-              <p className="mt-5 whitespace-pre-line text-sm font-medium leading-7 text-slate-600 sm:text-[15px] font-answer"><RichAnswer text={selectedFaq.answer} /></p>
+              <p className="mt-5 whitespace-pre-line text-sm font-medium leading-7 text-slate-900 sm:text-[15px] font-answer"><RichAnswer text={selectedFaq.answer} /></p>
 
               <SimilarQuestions
                 selectedFaq={selectedFaq}
@@ -701,7 +703,6 @@ function FAQExperience() {
                 openAccordion={openAccordion}
                 onToggle={setOpenAccordion}
               />
-
               <div className="mt-6 flex flex-col gap-3 border-t border-[#ebe5d9] pt-4 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-slate-400">Verified from the Samagama FAQ</span>
                 <button onClick={copyLink} className="flex items-center gap-2 self-start rounded-full border border-[#e0dbcf] bg-white px-4 py-2 text-xs font-extrabold text-slate-600 transition hover:bg-[#f7f3eb]">
